@@ -13,19 +13,12 @@ function config($routeProvider){
             controllerAs: "RenderComics"
         });  
         
-    // $routeProvider
-    //     .when('/register', {
-    //         templateUrl: "app/js/layout/register.html",
-    //         controller: "UserRegisterController",
-    //         controllerAs: "UserRegister"
-    //     });        
-        
-    // $routeProvider
-    //     .when('/user', {
-    //         templateUrl: "app/js/layout/user.html",
-    //         controller: "UserDetailsController",
-    //         controllerAs: "UserDetails"
-    //     });  
+    $routeProvider
+        .when('/comic/:id', {
+            templateUrl: "app/js/layout/theComicDetail.html",
+            controller: "handleRenderComicController",
+            controllerAs: "RenderComic"
+        }); 
 
-    $routeProvider.otherwise({redirectTo: '/'});
+    $routeProvider.otherwise('/');
 }})();

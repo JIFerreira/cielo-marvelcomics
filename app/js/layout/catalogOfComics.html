@@ -1,10 +1,13 @@
-<section class="content row">
-    <div class="card" ng-repeat="comic in RenderComics.returnOfData" data-id="{{comic.id}}">
+<section class="content row" ng-if="listShow">
+    <div class="card" ng-repeat="comic in RenderComics.returnOfData">
         <img class="card-img-top" ng-src="{{comic.thumbnail.path}}/portrait_incredible.{{comic.thumbnail.extension}}" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">
-                <a href="">{{comic.title}}</a>
+            <h5 class="card-title destructuring-ancor-b">
+                <a ng-href="#!/comic/{{comic.id}}">{{comic.title}}</a>
             </h5>
         </div>
     </div>
+</section>
+<section ng-show="progressShow" class="loading">
+    <progress-bar></progress-bar>
 </section>

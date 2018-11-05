@@ -1,0 +1,20 @@
+<section class="detailsOfComic" ng-if="listShow">
+    <div class="container" ng-repeat="marvel in RenderComic.comicDetails">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 col-md-5 col-xl-5 space-between-align">
+                <img src="{{marvel.thumbnail.path}}.{{marvel.thumbnail.extension}}" class="img-fluid">
+            </div>
+            <div class="col-lg-6 col-sm-12 col-md-7 col-xl-7 space-between">
+                <h3>{{marvel.title}}</h3>
+                <p ng-if="marvel.description !== null">{{marvel.description}}</p>
+                <p ng-if="marvel.description == null"> No description... </p>
+            </div>
+        </div>
+        <div class="row" style="padding: 2%;">
+            <a ng-href="{{marvel.urls[0].url}}" target="_blank" class="btn btn-more btn-lg"> See more... </a>
+        </div>
+    </div>
+</section>
+<section ng-show="progressShow" class="loading">
+    <progress-bar></progress-bar>
+</section>

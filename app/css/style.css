@@ -1,18 +1,20 @@
 body {
   height: 100vh;
   display: grid;
-  grid-template-rows: 75px auto 70px;
+  grid-template-rows: 55px auto 70px;
   grid-template-areas: "header header" "main main" "footer footer";
 }
 
 .header {
   grid-area: header;
-  background-color: #000000;
+  background-color: #22262a;
 }
 
 .header .logo {
   background: url('../img/marvel.svg') no-repeat center;
   height: 100%;
+  width: 11%;
+  margin: 0 auto;  
 }
 
 .container-content {
@@ -20,9 +22,7 @@ body {
 }
 
 .content {
-  /* max-width: 980px;
-  width: 100%;
-  margin: 0 auto;   */
+  justify-content: center;
   padding: 2% 0;
 }
 
@@ -31,7 +31,59 @@ body {
   margin: 5px;
 }
 
+.detailsOfComic {
+  padding: 8% 0;
+}
+
+
+.btn-more {
+  background-color: #000;
+  color: #fff;
+}
+
+.space-between {
+  margin: 2% 0;
+}
+
+.space-between-align {
+  text-align: center;
+  margin: 2% 0;
+}
+
+.breadcrumb-color {
+  border-top: 1px solid #393939;
+  background-color: #22262a;
+  padding: 0.5rem;
+}
+
+.destructuring-ancor-w a, .destructuring-ancor-w a:hover{ 
+  text-decoration: none!important;
+  color: #fff;
+}
+
+.destructuring-ancor-b a, .destructuring-ancor-b a:hover{
+  text-decoration: none!important;
+  color: #000;
+}
+
+.fa-arrow-left {
+  color: red!important;
+}
+
+.loading {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+}
+.loading .progress {
+  width: 50%;
+  margin: 0 auto;
+  height: 24px;
+}
+
 .footer {
   grid-area: footer;
-  background-color: #c2c2c2;
+  background-color: #202020;
+  padding-top: 2%;
+  color: #fff;
 }
