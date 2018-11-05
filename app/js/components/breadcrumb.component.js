@@ -15,7 +15,6 @@ angular
 
             $rootScope.$on('pageCurrent', function(evt, data) {
                 $scope.locale = data;
-                console.log('OLHA AQUI!!!', data);
             })
         }
     });

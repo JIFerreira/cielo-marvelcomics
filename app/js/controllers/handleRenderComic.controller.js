@@ -14,6 +14,5 @@ angular.module('marvelComics')
 
         vm.theComic.then((listOf) => {
             vm.comicDetails = listOf.data.data.results;
-            console.log(vm.comicDetails);
         });
     }
