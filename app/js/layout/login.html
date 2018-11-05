@@ -1,0 +1,11 @@
+<div class="container-login">
+    <h1>Login</h1>
+    <span ng-class="UserLogin.alert_login ? 'alert-info-show' : 'alert-info-hide'"><p>Verifique se o e-mail e senha estão corretos</p></span>
+    <fieldset>
+        <input class="input-email-login" ng-model="dadosDeLogin.email" name="email-login" type="text" placeholder="E-mail">
+        <input class="input-password-login" ng-model="dadosDeLogin.password" name="password-login" type="password" placeholder="Senha">
+
+        <a href="javascript:void(0);"  class="button-confirm-login" ng-click="UserLogin.confirmLogin(dadosDeLogin)">Entrar</a>
+        <a href="#!/register" class="button-redirect-register" >Cadastrar</a>
+    </fieldset>
+</div>

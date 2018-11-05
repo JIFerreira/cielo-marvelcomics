@@ -1,0 +1,10 @@
+<section class="content row">
+    <div class="card" ng-repeat="comic in RenderComics.returnOfData" data-id="{{comic.id}}">
+        <img class="card-img-top" ng-src="{{comic.thumbnail.path}}/portrait_incredible.{{comic.thumbnail.extension}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">
+                <a href="">{{comic.title}}</a>
+            </h5>
+        </div>
+    </div>
+</section>

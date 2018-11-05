@@ -1,0 +1,13 @@
+<div class="container-register">
+        <h1>Register</h1>
+        <span ng-class="UserRegister.alert_login ? 'alert-info-show' : 'alert-info-hide'"><p>Verifique se o e-mail e senha estão corretos</p></span>        
+        <fieldset>
+            <input class="input-nome-register" ng-model="dadosDeRegistro.nome" name="name-register" type="text" placeholder="Nome">
+            
+            <input class="input-email-register" ng-model="dadosDeRegistro.email" name="email-register" type="text" placeholder="E-mail">
+
+            <input class="input-password-register" ng-model="dadosDeRegistro.password" name="password-register" type="password" placeholder="Senha">
+            
+            <a href="javascript:void(0);" class="button-confirm-register"  ng-click="UserRegister.confirmRegister(dadosDeRegistro)">Registrar</a>
+        </fieldset>
+    </div>

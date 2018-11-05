@@ -1,0 +1,24 @@
+<div class="container-alter-details">
+    <h1>Bem-vindo aos detalhes de seu perfil - {{UserDetails.infosUsuario.nome}}</h1>
+    <fieldset>
+        <div class="container-input">
+            <label for="nome">Nome </label>
+            <input class="input-of-name" name="nome" type="text" placeholder="{{UserDetails.infosUsuario.nome}}" ng-model="alter.nome" ng-disabled="!checkedName"><input class="input-checkbox" type="checkbox" ng-model="checkedName" ng-init="checked=false">
+        </div>
+
+        <div class="container-input">
+            <label for="email">E-mail </label>
+            <input class="input-of-email" name="email" type="text" placeholder="{{UserDetails.infosUsuario.email}}"  ng-model="alter.email" ng-disabled="!checkedEmail"><input class="input-checkbox" type="checkbox" ng-model="checkedEmail" ng-init="checked=false">
+        </div>
+
+        <div class="container-input">                    
+            <label for="password">Password </label>
+            <input class="input-of-password" name="password" type="password" placeholder="*************" ng-model="alter.password" ng-disabled="!checkedPass"><input class="input-checkbox" type="checkbox" ng-model="checkedPass" ng-init="checked=false">
+        </div>
+        
+        <button ng-disabled="!checkedName && !checkedEmail && !checkedPass" class="button-alter-data" ng-click="UserDetails.alterInfo(alter)" data-user-id="{{UserDetails.infosUsuario.id}}">ALTERAR DADOS</button>
+        <button class="button-delete-user" ng-click="UserDetails.deleteUser()" data-user-id="{{UserDetails.infosUsuario.id}}">DELETAR</button>
+        <button class="button-confirm-exit" ng-click="UserDetails.sair()">SAIR</button>        
+    </fieldset>
+    
+</div>
